@@ -4,3 +4,52 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(fonts/HelveticaNeueMed.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+#top-heart {
+  margin-bottom: -36px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.info {
+  margin: 0 36px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.hearts {
+  text-align: center;
+}
+
+.title {
+  font-size: max(min(10vw, 72px), 56px);
+}
+
+.body {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
