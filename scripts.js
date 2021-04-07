@@ -17,8 +17,8 @@ function displayDark(e) {
 	star.style.display = "initial"
 	star.classList.add("star-active")
 
-	card.style.visibility = "hidden"
 	setTimeout(() => {
+		card.style.visibility = "hidden"
 		container.style.backgroundColor = "black"
 		star.style.display = "none"
 		window.location.href = "real.html";
