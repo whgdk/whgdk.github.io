@@ -19,8 +19,10 @@ function displayDark(e) {
 
 	setTimeout(() => {
 		card.style.visibility = "hidden"
+	}, 500)
+	setTimeout(() => {
 		container.style.backgroundColor = "black"
 		star.style.display = "none"
-		window.location.href = "real.html";
+		window.location.href = "real.html"
 	}, 1000)
 }
