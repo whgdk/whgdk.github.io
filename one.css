@@ -19,7 +19,7 @@ p {
 	margin: 18px 0;
 }
 
-.container {
+#container {
 	height: 100vh;
 	perspective: 1000px;
 
@@ -35,12 +35,13 @@ p {
   	transform: translateY(100px);
 }
 
-.card {
+#card {
 	width: 610px;
 	height: 330px;
 
 	background-color: #FFFCFE;
 	border: 3px solid black;
+	cursor: pointer;
 
 	padding: 30px 10px;
 
@@ -51,7 +52,11 @@ p {
   	transform: rotateX(40deg) rotateZ(-20deg) translateY(100px);
 }
 
-.wrapper:hover .card {
+#card:hover {
+	box-shadow: 0px 0px 60px 10px rgba(158, 0, 255, 0.2);
+}
+
+.wrapper:hover #card {
 	transform: rotate(0) translateY(-80px);
 }
 
@@ -62,3 +67,29 @@ p {
 	margin-right: 30px;
 }
 
+#star {
+	height: 5000px;
+	width: 5000px;
+
+	background-color: black;
+	display: none;
+
+	position: absolute;
+	z-index: 10;
+}
+
+.star-active {
+	animation: 1.2s polygon ease-in
+}
+
+@keyframes polygon {
+  0% { 
+  	clip-path: polygon(50% 50%, 50% 25%, 50% 50%, 75% 50%, 50% 50%, 50% 75%, 50% 50%, 25% 50%); 
+  	transform: scale(0.01)
+  }
+  100% { 
+  	clip-path: polygon(0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%); 
+  	transform: scale(1) rotate(90deg)
+  }
+  
+}
